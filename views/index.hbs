@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather</title>
+    <link rel="icon" href="img/weather.png">
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        {{Detail}}
+        </br>
+        </br>
+        <form id='f1'>
+            <input placeholder="Enter the location eg India" id='f2'>
+            <button>Search</button>
+        </form>
+        <br /><br />
+        <p id='f3'></p>
+        <p id='f4'></p>
+    </div>
+
+
+    <script src="/js/app.js"></script>
+    {{>footer}}
+</body>
+
+</html>
