@@ -9,9 +9,9 @@ const Geocode=require('./utils/Geocode')
 app.set('view engine', 'hbs');
 hbs.registerPartials(partialpath)
 const request=require('postman-request')
-const forecast = require('../../Weather-app/forecast')
+const forecast = require('./utils/forecast.js')
 //Path for the partial also needs to be registered
-
+const port=process.env.PORT||3000
 app.set('views',Viewpath)
 //Set up view path so that we can use views in different folder
 // app.use(express.static(Indexhtml))
@@ -22,7 +22,7 @@ app.get('',(req,res)=>{
     res.render('index',{
         title:"Weather forecast",
         Detail:'Use this app to forcast the weather!',
-        Name:'BroMan' 
+        Name:'NightCode' 
     })
 })
 
@@ -30,17 +30,17 @@ app.get('/help',(req,res)=>{
     res.render('help',{
         title:"Help",
         Questions:'Is it normal for my cpu to spontaneously combust when i load this website ?  No and yes, if you are protected then this should not be happening.',
-        question2:'Does jet fuel melt steal beams? *Sigh* Yes jet fuel can melt steal beams under certain circumstances.',
+        question2:'Does jet fuel melt steal beams? *Sigh* Yes jet fuel can definitely melt steal beams.',
         question3:'Is illuminati real? What even is my life, yes illuminati is real and the earth is flat.',
         question4:'The website is not loading properly for me? Press alt +shift+esc select your browser and click on end task. It usually gets it working for me.',
-        Name:'BroMan' 
+        Name:'NightCode' 
     })
 })
 
 app.get('/about',(req,res)=>{
     res.render('about',
         {title:'About me',
-          Name:'BroMan'  }
+          Name:'NightCode'  }
      );
 })
 
@@ -90,10 +90,10 @@ app.get('/product',(req,res)=>{
 app.get('*',(req,res)=>{
     res.render('404',{
         info1:"Error 404 Page not found",
-         Name:'BroMan'
+         Name:'NightCode'
     })
 })
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('app started')
 })

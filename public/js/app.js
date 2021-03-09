@@ -10,14 +10,14 @@ Webf.addEventListener('submit',(e)=>{
       vwarn.textContent='Loading...'
     if((v.value).trim()=='')
     return vwarn.textContent='Enter a valid input'
-    fetch('http://localhost:3000/weather?address='+v.value).then((response)=>{
+    fetch('/weather?address='+v.value).then((response)=>{
         response.json().then((data)=>{
             if(data.error)
             {
             return     vwarn.textContent=data.error
             }
-            vwarn.textContent=data.loc 
-            voutput.textContent=data.forecast
+            vwarn.textContent='Location: '+data.loc 
+            voutput.textContent='Forcast: '+data.forecast
             console.log(data.forecast)
             console.log(data.loc)
         })
