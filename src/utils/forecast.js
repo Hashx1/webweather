@@ -11,7 +11,8 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to find location'+url, undefined)
         } 
         else {
-            callback(undefined, ' It is currently '+response.body.current.weather_descriptions[0] + ' with '+ response.body.current.temperature +' degree  and '  + response.body.current.precip + '% chance of rain.')
+            callback(undefined, ' It is currently '+response.body.current.weather_descriptions[0] + ' with '+ response.body.current.temperature +' degree  and '  + response.body.current.precip + '% chance of rain.'
+                +' The date and time are as follows '+response.body.location.localtime)
         }
     })
 }

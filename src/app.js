@@ -32,7 +32,7 @@ app.get('/help',(req,res)=>{
         Questions:'Is it normal for my cpu to spontaneously combust when i load this website ?  No and yes, if you are protected then this should not be happening.',
         question2:'Does jet fuel melt steal beams? *Sigh* Yes jet fuel can definitely melt steal beams.',
         question3:'Is illuminati real? What even is my life, yes illuminati is real and the earth is flat.',
-        question4:'The website is not loading properly for me? Press alt +shift+esc select your browser and click on end task. It usually gets it working for me.',
+        question4:'The website is not loading properly for me? Try reloading usually outdate browser is cause of the delays',
         Name:'NightCode' 
     })
 })
